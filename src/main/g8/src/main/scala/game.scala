@@ -13,8 +13,18 @@ object $game_class$ {
 }
 
 class $game_class$ extends BasicGame("$name$") {
+  var current = new java.util.Date()
+
+  override def init(gc: GameContainer) {
+    println("Initialized $game_class$")
+  }
+
+  override def update(gc: GameContainer, delta: Int) {
+    current = new java.util.Date()
+  }
+
   override def render(gc: GameContainer, g: Graphics) {
     g.setColor(Color.white)
-    g.drawString("Hello $name$", 200, 10)
+    g.drawString("Hello $name$, %s".format(current), 200, 10)
   }
 }
