@@ -1,1 +1,1 @@
-addSbtPlugin("com.github.philcali" % "sbt-lwjgl-plugin" % "3.1.2")
+addSbtPlugin("com.github.philcali" % "sbt-lwjgl-plugin" % "$sbt_lwjgl_version$")
